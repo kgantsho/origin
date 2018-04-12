@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Checkers
 {
-    class Piece : IPiece
+    public class Piece : IPiece
     {
        virtual public IEnumerable<int> CapturingMoves(IBoard board)
         {
