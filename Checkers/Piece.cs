@@ -6,12 +6,6 @@ namespace Checkers
 {
     class Piece : IPiece
     {
-       virtual public Status Status => throw new NotImplementedException();
-
-       virtual public Color Color => throw new NotImplementedException();
-
-       virtual public int Position => throw new NotImplementedException();
-
        virtual public IEnumerable<int> CapturingMoves(IBoard board)
         {
             throw new NotImplementedException();
@@ -26,5 +20,17 @@ namespace Checkers
         {
             throw new NotImplementedException();
         }
+
+        public Piece(Color c, int pos)
+        {
+            Status = Status.Active;
+            Position = pos;
+            Color = c;
+        }
+        public virtual Status Status { get; set; }
+        public virtual Color Color { get; private set; }
+        public virtual int Position { get; private set; }
+
+
     }
 }

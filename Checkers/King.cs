@@ -6,9 +6,7 @@ namespace Checkers
 {
     class King : Piece
     {
-        public King()
-        {
+        public King(Color c, int p) : base(c, p) { }
 
-        }
     }
 }
